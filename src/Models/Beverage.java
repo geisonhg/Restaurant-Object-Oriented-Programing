@@ -9,6 +9,16 @@ package Models;
  *
  * @author geiso
  */
-public class Beverage {
+public class Beverage extends Item{
+    boolean Alcoholic;
+
+    public Beverage(boolean Alcoholic, String name, double price, String type) {
+        super(name, price, type);
+        this.Alcoholic = Alcoholic;
+    }
+
+    public Beverage() {
+    }
+    
     
 }

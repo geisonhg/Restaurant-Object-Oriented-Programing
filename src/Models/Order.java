@@ -5,6 +5,7 @@
  */
 package Models;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -12,6 +13,22 @@ import java.util.Date;
  * @author geiso
  */
 public class Order {
-    Date date = new Date();
+    Date date;
+    Table table;
+    boolean status;
+    ArrayList subOrder;
+    int id;
+
+    public Order() {
+    }
+
+    public Order(Date date, Table table, boolean status, ArrayList subOrder) {
+        this.date = date;
+        this.table = table;
+        this.status = status;
+        this.subOrder = subOrder;
+    }
+    
+    
     
 }

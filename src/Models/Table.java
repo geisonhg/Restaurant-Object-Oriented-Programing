@@ -10,5 +10,5 @@ package Models;
  * @author geiso
  */
 public class Table {
-    
+    int tableNumber;
 }

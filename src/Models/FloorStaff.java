@@ -9,6 +9,10 @@ package Models;
  *
  * @author geiso
  */
-public class FloorStaff {
+public class FloorStaff extends Item{
+
+    public FloorStaff() {
+    }
+    
     
 }

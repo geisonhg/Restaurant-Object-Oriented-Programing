@@ -5,35 +5,26 @@
  */
 package Models;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author geiso
  */
-public abstract class Employe {
-    
+public class Company {
     String name;
     int id;
-    Boolean managerPermisions;
+    ArrayList employees;
 
-    public Employe() {
+    public Company() {
     }
 
-    public Employe(String name, int id) {
+    public Company(String name, int id, ArrayList employees) {
         this.name = name;
         this.id = id;
+        this.employees = employees;
     }
 
-    public Boolean getManagerPermisions() {
-        return managerPermisions;
-    }
-
-    public void setManagerPermisions(Boolean managerPermisions) {
-        this.managerPermisions = managerPermisions;
-    }
-
-    
-    
-    
     public String getName() {
         return name;
     }
@@ -49,9 +40,22 @@ public abstract class Employe {
     public void setId(int id) {
         this.id = id;
     }
+
+    public ArrayList getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(ArrayList employees) {
+        this.employees = employees;
+    }
     
-    public abstract void takeOrder(Item item);
-    public abstract void closeOrder();
+    public void addEmployee(Employe employe){
+        this.employees.add(employe);
+    }
+    
+    public void removeEmployee(int id){
+        this.employees.remove(employees.indexOf(id));
+    }
     
     
 }
