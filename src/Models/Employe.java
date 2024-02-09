@@ -18,9 +18,10 @@ public abstract class Employe {
     public Employe() {
     }
 
-    public Employe(String name, int id) {
+    public Employe(String name, int id, Boolean managerPermisions) {
         this.name = name;
         this.id = id;
+        this.managerPermisions = managerPermisions;
     }
 
     public Boolean getManagerPermisions() {

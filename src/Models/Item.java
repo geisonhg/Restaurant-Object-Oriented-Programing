@@ -12,15 +12,13 @@ package Models;
 public abstract class Item {
     String name;
     double price;
-    String type;
 
     public Item() {
     }
 
-    public Item(String name, double price, String type) {
+    public Item(String name, double price) {
         this.name = name;
         this.price = price;
-        this.type = type;
     }
 
     public String getName() {
@@ -39,13 +37,4 @@ public abstract class Item {
         this.price = price;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-    
-    
 }

@@ -50,6 +50,7 @@ public class Company {
     }
     
     public void addEmployee(Employe employe){
+        employe.setId(this.employees.size()-1);
         this.employees.add(employe);
     }
     

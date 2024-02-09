@@ -9,9 +9,19 @@ package Models;
  *
  * @author geiso
  */
-public class FloorStaff extends Item{
+public class FloorStaff extends Employe{
 
     public FloorStaff() {
+    }
+
+    @Override
+    public void takeOrder(Item item) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void closeOrder() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

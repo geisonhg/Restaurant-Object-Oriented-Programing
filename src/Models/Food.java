@@ -10,5 +10,8 @@ package Models;
  * @author geiso
  */
 public class Food extends Item{
+
+    public Food() {
+    }
     
 }
