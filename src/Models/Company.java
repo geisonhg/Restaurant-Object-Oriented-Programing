@@ -12,9 +12,10 @@ import java.util.ArrayList;
  * @author geiso
  */
 public class Company {
+
     String name;
     int id;
-    ArrayList employees;
+    ArrayList<Employe> employees;
 
     public Company() {
     }
@@ -48,15 +49,38 @@ public class Company {
     public void setEmployees(ArrayList employees) {
         this.employees = employees;
     }
-    
-    public void addEmployee(Employe employe){
-        employe.setId(this.employees.size()-1);
+
+    public void addEmployee(Employe employe) {
+        employe.setId(this.employees.size() + 1);
         this.employees.add(employe);
     }
-    
-    public void removeEmployee(int id){
-        this.employees.remove(employees.indexOf(id));
+
+    public void removeEmployee(int id) {
+        for (int i = 0; i < this.employees.size(); i++) {
+            if (this.employees.get(i).getId() == id) {
+                this.employees.remove(employees.indexOf(id));
+                break;
+            }
+        }
+
+    }
+
+    public String findEmployee(int id) {
+
+        for (int i = 0; i < this.employees.size(); i++) {
+            if (this.employees.get(i).getId() == id) {
+                return this.employees.get(i).getName();
+            }
+        }
+        return null;
     }
     
-    
+    public String showEmployee(){
+        String names="";
+        for (int i = 0; i < this.employees.size(); i++) {
+            names = names +" "+this.employees.get(i).getName();
+        }
+        return names;
+    }
+
 }
