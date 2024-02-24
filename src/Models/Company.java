@@ -6,6 +6,7 @@
 package Models;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -56,12 +57,15 @@ public class Company {
     }
 
     public void removeEmployee(int id) {
+        
         for (int i = 0; i < this.employees.size(); i++) {
             if (this.employees.get(i).getId() == id) {
                 this.employees.remove(employees.indexOf(id));
+                JOptionPane.showConfirmDialog(null,this.employees.get(i).name+ " is Deleted");
                 break;
             }
         }
+        JOptionPane.showConfirmDialog(null,"Incorrect id");
 
     }
 
